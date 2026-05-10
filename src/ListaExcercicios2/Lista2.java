@@ -2,62 +2,64 @@ package ListaExcercicios2;
 
 import java.util.Scanner;
 
-public class ListaExcercicios2 {
+public class Lista2 {
     public static void main(String[] args) {
-        //ex1();
-        //ex2();
-        //ex3();
-        //ex4();
-        //ex5();
-        //ex6();
-        //ex7();
-        //ex8();
-        //ex9();
-        //ex10();
-        //ex11();
-        //ex12();
-        //ex13();
-        //ex14();
-        //ex15();
-        //ex16();
-        //ex17();
-        //ex18();
-        //ex19();
-        //ex20();
+        /*
+        ex1();
+        ex2();
+        ex3();
+        ex4();
+        ex5();
+        ex6();
+        ex7();
+        ex8();
+        ex9();
+        ex10();
+        ex11();
+        ex12();
+        ex13();
+        ex14();
+        ex15();
+        ex16();
+        ex17();
+        ex18();
+        ex19();
+        ex20();
+         */
     }
 
-    static void ex1(){
+    static void ex1() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um numero:");
         int numero = sc.nextInt();
 
-        if (numero % 2 == 0){
+        if (numero % 2 == 0) {
             System.out.println("NÚMERO PAR");
         } else {
             System.out.println("NÚMERO IMPAR");
         }
     }
 
-    static void ex2(){
+    static void ex2() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um numero:");
         int n1 = sc.nextInt();
         System.out.println("Digite outro numero");
         int n2 = sc.nextInt();
 
-        if (n1>n2){
+        if (n1 > n2) {
             System.out.println("Numero: " + n1 + " É o maior.");
         } else {
             System.out.println("Numero: " + n2 + " É o maior.");
         }
     }
 
-    static void ex3(){
+    static void ex3() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um numero:");
         int numero = sc.nextInt();
 
-        if (numero < 0){
+        if (numero < 0) {
             System.out.println("NUMERO: " + numero + " É NEGATIVO.");
         } else if (numero > 0) {
             System.out.println("NÚMERO " + numero + "É POSITIVO");
@@ -67,33 +69,33 @@ public class ListaExcercicios2 {
 
     }
 
-    static void ex4(){
+    static void ex4() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Digite 1 número:");
         double numero1 = sc.nextDouble();
 
-        if (numero1 > 6){
+        if (numero1 > 6) {
             System.out.println("APROVADO");
         } else {
             System.out.println("REPROVADO");
         }
     }
 
-    static void ex5(){
+    static void ex5() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Digite sua idade");
         double numero1 = sc.nextDouble();
 
-        if (numero1 >= 16){
+        if (numero1 >= 16) {
             System.out.println("PODE VOTAR");
         } else {
             System.out.println("NAO PODE VOTAR");
         }
     }
 
-    static void ex6(){
+    static void ex6() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um número:");
         int n1 = sc.nextInt();
@@ -102,9 +104,9 @@ public class ListaExcercicios2 {
         System.out.println("Digite mais um número:");
         int n3 = sc.nextInt();
 
-        if (n1 > n2 && n1 >n3){
+        if (n1 > n2 && n1 > n3) {
             System.out.println("MAIOR NÚMERO: " + n1);
-        } else if (n2 > n1 && n2 >n3) {
+        } else if (n2 > n1 && n2 > n3) {
             System.out.println("MAIOR NÚMERO: " + n2);
         } else {
             System.out.println("MAIOR NÚMERO: " + n3);
@@ -112,16 +114,16 @@ public class ListaExcercicios2 {
 
     }
 
-    static void ex7(){
+    static void ex7() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite sua nota:");
         double nota = sc.nextDouble();
 
-        if (nota >=0 && nota <=4){
+        if (nota >= 0 && nota <= 4) {
             System.out.println("Insuficiente");
-        } else if (nota <=6) {
+        } else if (nota <= 6) {
             System.out.println("Regular");
-        } else if (nota <=8) {
+        } else if (nota <= 8) {
             System.out.println("BOM");
         } else {
             System.out.println("Excelente");
@@ -129,7 +131,7 @@ public class ListaExcercicios2 {
 
     }
 
-    static void ex8(){
+    static void ex8() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Primeiro lado:");
         double x = sc.nextDouble();
@@ -147,7 +149,7 @@ public class ListaExcercicios2 {
         }
     }
 
-    static void ex9(){
+    static void ex9() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite o lado A: ");
         double a = sc.nextDouble();
@@ -173,7 +175,7 @@ public class ListaExcercicios2 {
         }
     }
 
-    static void ex10(){
+    static void ex10() {
         Scanner sc = new Scanner(System.in);
 
         String usuario;
@@ -194,7 +196,7 @@ public class ListaExcercicios2 {
         }
     }
 
-    static void ex11(){
+    static void ex11() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite um ano: ");
@@ -207,7 +209,7 @@ public class ListaExcercicios2 {
         }
     }
 
-    static void ex12(){
+    static void ex12() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o primeiro número: ");
@@ -246,7 +248,7 @@ public class ListaExcercicios2 {
         }
     }
 
-    static void ex13(){
+    static void ex13() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o salário: ");
@@ -271,7 +273,7 @@ public class ListaExcercicios2 {
 
     }
 
-    static void ex14(){
+    static void ex14() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o valor da compra: ");
@@ -295,7 +297,7 @@ public class ListaExcercicios2 {
         System.out.println("Valor final: R$ " + valorFinal);
     }
 
-    static void ex15(){
+    static void ex15() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite a idade: ");
@@ -318,7 +320,7 @@ public class ListaExcercicios2 {
         }
     }
 
-    static void ex16(){
+    static void ex16() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite seu nome:");
         String nome = sc.nextLine();
@@ -326,15 +328,15 @@ public class ListaExcercicios2 {
         double numero1 = sc.nextDouble();
         double numero2 = sc.nextDouble();
         double numero3 = sc.nextDouble();
-        double soma = numero1+numero2+numero3;
-        double mediaFinal = soma/3;
+        double soma = numero1 + numero2 + numero3;
+        double mediaFinal = soma / 3;
 
-        if (mediaFinal >= 7){
+        if (mediaFinal >= 7) {
             System.out.println("--------------------");
             System.out.println("PARABÉNS " + nome);
             System.out.printf("MÉDIA FINAL: %.2f%n", mediaFinal);
             System.out.println("VOCÊ FOI APROVADO!!!");
-        } else if (mediaFinal >=5){
+        } else if (mediaFinal >= 5) {
             System.out.println("VOCÊ ESTÁ EM RECUPERAÇÃO:");
         } else {
             System.out.println("---------------------");
@@ -343,7 +345,7 @@ public class ListaExcercicios2 {
         }
     }
 
-    static void ex17(){
+    static void ex17() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite o salário: R$ ");
         double salario = sc.nextDouble();
@@ -361,7 +363,7 @@ public class ListaExcercicios2 {
 
     }
 
-    static void ex18(){
+    static void ex18() {
         Scanner sc = new Scanner(System.in);
 
         int numeroSecreto = 9;
@@ -379,7 +381,7 @@ public class ListaExcercicios2 {
 
     }
 
-    static void ex19(){
+    static void ex19() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Digite seu peso:");
@@ -403,7 +405,7 @@ public class ListaExcercicios2 {
 
     }
 
-    static void ex20(){
+    static void ex20() {
         Scanner sc = new Scanner(System.in);
 
         String usuarioAcesso = "administrador";
