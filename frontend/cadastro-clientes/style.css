@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f0f4ff;
+  color: #222;
+  padding: 30px;
+}
+
+/* CENTRALIZAÇÃO */
+.centralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* CARD DO FORMULÁRIO */
+.card {
+  background: #fff;
+  border: 1px solid #c5d5f5;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 4px 12px rgba(0, 100, 255, 0.08);
+}
+
+/* TÍTULO */
+h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  color: #1a4fbd;
+}
+
+/* LABEL DOS INPUTS */
+.campo label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #1a4fbd;
+  box-shadow: 0 0 0 3px rgba(26, 79, 189, 0.1);
+}
+
+input[readonly] {
+  background: #f5f7ff;
+  color: #888;
+}
+
+/* BOTÕES */
+button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background: #1a4fbd;
+  color: white;
+  cursor: pointer;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1340a0;
+}
+
+.btn-voltar {
+  background: #6c757d;
+  width: auto;
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.btn-voltar:hover {
+  background: #5a6268;
+}
+
+.btn-excluir {
+  background: #dc3545;
+}
+
+.btn-excluir:hover {
+  background: #b52a37;
+}
+
+/* HEADER DA LISTA */
+.lista-topo {
+  max-width: 820px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista-topo h2 {
+  margin: 0;
+}
+
+/* LISTA */
+.lista {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* CARD DE CLIENTE */
+.card-cliente {
+  background: #fff;
+  border: 1px solid #c5d5f5;
+  border-left: 5px solid #1a4fbd;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-info p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.card-info p strong {
+  color: #1a4fbd;
+}
+
+.card-botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.card-botoes button {
+  padding: 7px 14px;
+  font-size: 13px;
+  width: auto;
+  margin: 0;
+}
+
+/* DETALHES (ENDEREÇO) */
+.detalhes {
+  display: none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e0e8ff;
+}
+
+.campo-detalhe {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.campo-detalhe label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #1a4fbd;
+}
+
+.campo-detalhe input {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.aberto {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modal-box h3 {
+  color: #1a4fbd;
+  margin-bottom: 6px;
+}
+
+.modal-botoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* MENSAGENS */
+.msg {
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: none;
+  font-size: 14px;
+}
+
+.msg.sucesso {
+  background: #e6f4ea;
+  color: #1e7e34;
+  display: block;
+}
+
+.msg.erro {
+  background: #fdecea;
+  color: #b02a37;
+  display: block;
+}
+
+/* ESTADO VAZIO */
+.vazio {
+  text-align: center;
+  color: #888;
+  padding: 30px;
+  font-size: 15px;
+}
+
+.msg-cep {
+  font-size: 12px;
+  color: #1a4fbd;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  display: none;
+}

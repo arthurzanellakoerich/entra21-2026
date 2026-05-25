@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="lista-topo">
+    <h2> Clientes Cadastrados</h2>
+    <button class="btn-voltar" onclick="location.href='index.html'">← Voltar</button>
+  </div>
+
+  <!-- Mensagem de sucesso/erro da lista -->
+  <div id="msg" class="msg" style="max-width:820px; margin: 0 auto 10px;"></div>
+
+  <div id="lista" class="lista"></div>
+
+  <!-- MODAL EDITAR -->
+  <div id="modal" class="modal" onclick="fecharModal()">
+
+    <div class="modal-box" onclick="event.stopPropagation()">
+
+      <h3>️ Editar Cliente</h3>
+
+      <input type="text" id="editNome" placeholder="Nome">
+      <input type="email" id="editEmail" placeholder="Email">
+      <input type="tel" id="editTelefone" placeholder="Telefone">
+
+      <input type="text" id="editCep" placeholder="CEP" onblur="buscarCEPEdicao()">
+      <p id="msg-cep-edicao" class="msg-cep">🔍 Buscando endereço...</p>
+
+      <input type="text" id="editRua" placeholder="Rua">
+      <input type="text" id="editBairro" placeholder="Bairro">
+      <input type="text" id="editCidade" placeholder="Cidade">
+      <input type="text" id="editEstado" placeholder="Estado">
+
+      <div class="modal-botoes">
+        <button onclick="salvarEdicao()">Salvar</button>
+        <button class="btn-voltar" onclick="fecharModal()">Cancelar</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #2a2a2a;
+  color: #eee;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+  background: #1a1a1a;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #888;
+}
+
+.cabecalho h1 {
+  font-size: 22px;
+  color: #ccc;
+  letter-spacing: 2px;
+}
+
+.filme-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.filme-nome {
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.filme-detalhe {
+  font-size: 13px;
+  color: #888;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+  max-width: 700px;
+  margin: 36px auto;
+  padding: 0 20px;
+}
+
+/* TELA DO CINEMA */
+.tela {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.tela-barra {
+  height: 6px;
+  background: linear-gradient(to right, transparent, #aaa, transparent);
+  border-radius: 50%;
+  margin-bottom: 8px;
+  box-shadow: 0 0 12px rgba(200, 200, 200, 0.2);
+}
+
+.tela-texto {
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 6px;
+}
+
+/* SALA DE ASSENTOS */
+.sala {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 32px;
+}
+
+.fileira {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.fileira-label {
+  font-size: 12px;
+  color: #555;
+  width: 16px;
+  text-align: center;
+}
+
+/* ASSENTOS */
+.assento {
+  width: 34px;
+  height: 30px;
+  border-radius: 7px 7px 3px 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.assento:hover {
+  transform: scale(1.12);
+}
+
+.assento.livre {
+  background: grey;  /* azul médio */
+  color: #fff;
+  border: 1px solid #3a3a3a;
+}
+
+.assento.livre:hover {
+  background: #383838;
+  color: #aaa;
+}
+
+.assento.selecionado {
+  background: forestgreen;
+  color: #fff;
+  border: 1px solid #aaa;
+
+}
+
+.assento.ocupado {
+  background: red;
+  color: #333;
+  border: 1px solid #222;
+  cursor: not-allowed;
+}
+
+.assento.ocupado:hover {
+  transform: none;
+}
+
+/* CORREDOR */
+.espaco {
+  width: 22px;
+}
+
+/* LEGENDA */
+.legenda {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #888;
+}
+
+.assento-exemplo {
+  width: 20px;
+  height: 18px;
+  border-radius: 4px 4px 2px 2px;
+}
+
+.assento-exemplo.livre       { background: #2a2a2a; border: 1px solid #3a3a3a; }
+.assento-exemplo.selecionado { background: #888; }
+.assento-exemplo.ocupado     { background: #1c1c1c; border: 1px solid #222; }
+
+/* RESUMO */
+.resumo {
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+}
+
+#texto-resumo {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+/* BOTÃO CONFIRMAR */
+#btn-confirmar {
+  background: #666;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 44px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+
+#btn-confirmar:hover:not(:disabled) {
+  background: #888;
+}
+
+#btn-confirmar:disabled {
+  background: #252525;
+  color: #444;
+  cursor: not-allowed;
+}
