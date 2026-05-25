@@ -4,26 +4,6 @@ import java.util.Scanner;
 
 public class Lista {
     public static void main(String[] args) {
-        /*
-        ex1();
-        ex2();
-        ex3();
-        ex4();
-        ex5();
-        ex6();
-        ex7();
-        ex8();
-        ex9();
-        ex10();
-        ex11();
-        ex12();
-        ex13();
-        ex14();
-        ex15();
-        ex16();
-        desafio();
-        desafio2();
-         */
     }
 
     static void ex1(){
@@ -209,5 +189,26 @@ public class Lista {
         double valorTotal = quantidade*preco;
         System.out.println("VALOR TOTAL DE = " + valorTotal);
     }
+
+       /*
+        ex1();
+        ex2();
+        ex3();
+        ex4();
+        ex5();
+        ex6();
+        ex7();
+        ex8();
+        ex9();
+        ex10();
+        ex11();
+        ex12();
+        ex13();
+        ex14();
+        ex15();
+        ex16();
+        desafio();
+        desafio2();
+         */
 
 }
