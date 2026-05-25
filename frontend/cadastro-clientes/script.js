@@ -35,7 +35,7 @@ function buscarCEP() {
   const cep = cepInput.value.replace(/\D/g, ''); // Remove tudo que não for número
   if (cep.length !== 8) return;
 
-  // Mostra mensagem de carregando
+
   const msgCep = document.getElementById('msg-cep');
   if (msgCep) msgCep.style.display = 'block';
 
