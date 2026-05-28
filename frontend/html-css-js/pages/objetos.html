@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos em JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+        h1 { color: #444; }
+    </style>
+</head>
+<body>
+    <h1>Objetos em JavaScript</h1>
+    <p>Abra o console (F12) para ver os resultados.</p>
+    <script>
+
+        const pessoa = {
+            nome: 'Carlos',
+            idade: 25,
+            profissao: 'Desenvolvedor',
+            apresentar: function () {
+                return `Nome: ${this.nome} | Idade: ${this.idade} | Profissão: ${this.profissao}`
+            }
+        }
+        console.log(pessoa)
+        console.log(pessoa.apresentar())
+
+        // Array com tipos variados
+        const itens = []
+        itens.push('JavaScript')
+        itens.push(2024)
+        itens.push({ linguagem: 'Python' })
+        itens.push({ linguagem: 'Java', nivel: 'intermediário' })
+        console.log(itens)
+
+
+        var produto = { descricao: 'Notebook' }
+        console.log(produto)
+        produto = { preco: 3500, estoque: 5 }
+        console.log(produto)
+
+        var itemVenda = {
+            produto: produto,
+            quantidade: 2,
+            subtotal: function () {
+                return this.produto.preco * this.quantidade
+            }
+        }
+        console.log('Subtotal: R$', itemVenda.subtotal())
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style-type: none;
+        }
+
+        .submenu{
+            display: none;
+        }
+
+        .menu{
+            font-size: 18px;  
+            position: relative;          
+        }
+
+        .menu:hover .submenu{
+            background-color: #111111;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li>cadastro</li>
+            <div class="submenu">
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">vendas</a></li>
+            </div>            
+        </ul>
+    </nav>
+</body>
+</html>

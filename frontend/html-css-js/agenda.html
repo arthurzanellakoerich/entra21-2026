@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Contatos</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f0f4f8;
+        }
+
+        h1, h2 { color: #333; }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button[type="submit"]:hover { background-color: #218838; }
+
+        #contador {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        table {
+            margin-top: 15px;
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #28a745;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        tbody tr:hover { background-color: #eaf4ec; }
+
+        .btn-remover {
+            padding: 5px 10px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .btn-remover:hover { background-color: #b02a37; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Cadastro de Contatos</h1>
+
+    <form id="formContato">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Ex: Maria Silva" required />
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Ex: maria@email.com" required />
+
+        <label for="telefone">Telefone</label>
+        <input type="text" id="telefone" placeholder="Ex: (47) 99999-0000" required />
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Lista de Contatos</h2>
+    <p id="contador">Total: 0 contato(s)</p>
+
+    <table id="tabelaContatos">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+    const contatos = []
+    const form = document.getElementById('formContato')
+    const tbody = document.querySelector('#tabelaContatos tbody')
+    const contador = document.getElementById('contador')
+
+    class Contato {
+        constructor(nome, email, telefone) {
+            this.nome = nome
+            this.email = email
+            this.telefone = telefone
+        }
+    }
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault()
+
+        const nome = document.getElementById('nome').value.trim()
+        const email = document.getElementById('email').value.trim()
+        const telefone = document.getElementById('telefone').value.trim()
+
+        const contato = new Contato(nome, email, telefone)
+        contatos.push(contato)
+
+        atualizarTabela()
+        form.reset()
+        document.getElementById('nome').focus()
+    })
+
+    function remover(index) {
+        contatos.splice(index, 1)
+        atualizarTabela()
+    }
+
+    function atualizarTabela() {
+        tbody.innerHTML = ''
+        contador.textContent = `Total: ${contatos.length} contato(s)`
+
+        for (let i = 0; i < contatos.length; i++) {
+            const c = contatos[i]
+            const linha = document.createElement('tr')
+            linha.innerHTML = `
+                <td>${c.nome}</td>
+                <td>${c.email}</td>
+                <td>${c.telefone}</td>
+                <td><button class="btn-remover" onclick="remover(${i})">Remover</button></td>
+            `
+            tbody.appendChild(linha)
+        }
+    }
+</script>
+</body>
+</html>

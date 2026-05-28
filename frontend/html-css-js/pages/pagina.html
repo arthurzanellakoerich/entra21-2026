@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Saudação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8;
+        }
+        h2 {
+            color: #333;
+            font-size: 2rem;
+        }
+    </style>
+    <script src="../js/aula.js"></script>
+</head>
+<body>
+    <h2 id="mensagem">Olá!</h2>
+    <script>
+        let nome = prompt('Informe seu nome')
+        if (nome) {
+            document.getElementById('mensagem').textContent = 'Olá, ' + nome + '!'
+            saudacao(nome)
+        }
+    </script>
+</body>
+</html>

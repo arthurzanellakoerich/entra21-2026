@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos em JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f0f4f8;
+        }
+        h1 { color: #333; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+    <h1>Objetos em JavaScript</h1>
+    <p>Abra o console (F12) para ver os resultados.</p>
+
+    <script>
+        // Objeto livro com método
+        const livro = {
+            titulo: 'JavaScript: O Guia Definitivo',
+            autor: 'David Flanagan',
+            ano: 2020,
+            descricao: function () {
+                return `"${this.titulo}" por ${this.autor} (${this.ano})`
+            }
+        }
+        console.log(livro)
+        console.log(livro.descricao())
+
+        // Array com tipos variados
+        const colecao = []
+        colecao.push('Programação')
+        colecao.push(2024)
+        colecao.push({ linguagem: 'JavaScript' })
+        colecao.push({ linguagem: 'Python', nivel: 'iniciante' })
+        console.log(colecao)
+
+        // Objeto produto com reatribuição
+        var produto = { descricao: 'Teclado mecânico' }
+        console.log(produto)
+        produto = { preco: 350, estoque: 8 }
+        console.log(produto)
+
+        // Objeto item de venda com método de subtotal
+        var itemVenda = {
+            produto: produto,
+            quantidade: 3,
+            subtotal: function () {
+                return this.produto.preco * this.quantidade
+            }
+        }
+        console.log('Subtotal: R$', itemVenda.subtotal())
+    </script>
+</body>
+</html>
